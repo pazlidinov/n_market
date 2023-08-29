@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
+
+:root {
+  /* Colors */
+  --color-white: #fff;
+  --color-main: #22C55E;
+  --color-gray: #F4F5F9;
+  --gradient-main: linear-gradient(90deg, #c2a1fd 0%, #9154fd 100%);
+
+  --text: #3a3541;
+  --text-light: #89868d;
+  --text-disable: #b4b2b7;
+
+  --bg-neutral: #ffffff;
+  --bg-main: #f4f5f9;
+  --bg-second: #e7e7f4;
+
+  --color-border: #e6e6e6;
+
+  /* Font-sizes */
+
+  /* Display */
+  --size-d-l: 32px;
+  --size-d-m: 30px;
+  --size-d-s: 28px;
+  /* Heading */
+  --size-h-l: 26px;
+  --size-h-m: 24px;
+  --size-h-s: 22px;
+
+  /* Title */
+  --size-t-l: 20px;
+  --size-t-m: 18px;
+  --size-t-s: 16px;
+
+  /* Body */
+  --size-b-l: 16px;
+  --size-b-m: 14px;
+  --size-b-s: 12px;
+}
