@@ -1,0 +1,93 @@
+/* Main Navbar */
+
+nav.main {
+  background-color: var(--color-main);
+}
+
+nav.main .container-fluid .collapse .navbar-nav .nav-item a {
+  display: grid;
+  text-align: center;
+  gap: 5px;
+  margin-right: 5px;
+  border-radius: 4px;
+  color: var(--color-white);
+}
+
+nav.main .container-fluid .collapse .navbar-nav .nav-item a.active,
+nav.main .container-fluid .collapse .navbar-nav .nav-item a:hover {
+  background: var(--color-white) !important;
+  color: var(--color-main) !important;
+}
+
+nav.main .container-fluid .collapse .navbar-nav .nav-item a svg {
+  margin: 0 auto;
+}
+
+.navbar .profile button {
+  border: none;
+  border-radius: 0;
+  background-color: var(--color-main);
+}
+
+.navbar .profile ul.dropdown-menu {
+  border-radius: 0;
+  border: none;
+  box-shadow: 0 0 2px;
+  margin-top: 10px;
+}
+
+.navbar .profile a.dropdown-item {
+  color: var(--text);
+  text-align: start;
+}
+
+.navbar .profile a.dropdown-item:hover {
+  /* color: white; */
+  background-color: var(--bg-second);
+}
+
+@media (max-width: 900px) {
+  nav.main .container-fluid .collapse .navbar-nav .nav-item a {
+    display: block;
+    text-align: start;
+  }
+
+  nav.main .container-fluid .collapse .navbar-nav .nav-item a.active {
+    background: none;
+  }
+}
+
+/* Secont navbar */
+.second .container-fluid button.navbar-toggler {
+  border: none;
+  box-shadow: none;
+}
+
+.second .container-fluid .collapse .navbar-nav .nav-item a {
+  margin-right: 3px;
+}
+
+.second .container-fluid .collapse .navbar-nav .nav-item a:hover {
+  border-bottom: var(--color-main) 2px solid !important;
+}
+
+.second .container-fluid .collapse .navbar-nav .nav-item a.active {
+  border-bottom: var(--color-main) 2px solid !important;
+}
+
+@media (max-width: 900px) {
+  .second .container-fluid .collapse .navbar-nav .nav-item a {
+    display: block;
+    text-align: start;
+  }
+
+  .second .container-fluid .collapse .navbar-nav .nav-item a:hover {
+    background-color: var(--bg-second);
+    border: none;
+  }
+
+  .second .container-fluid .collapse .navbar-nav .nav-item a.active {
+    border: none;
+    border-right: 2px solid var(--color-main) !important;
+  }
+}

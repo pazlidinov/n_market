@@ -1,0 +1,344 @@
+@font-face {
+  font-family: "Secondary";
+  src: url(".");
+}
+
+input,
+button {
+  font-family: "Secondary";
+}
+
+nav.main {
+  background-color: var(--color-main);
+}
+
+nav.main .container-fluid .collapse .navbar-nav .nav-item a {
+  display: grid;
+  text-align: center;
+  gap: 5px;
+  margin-right: 5px;
+  border-radius: 4px;
+  color: var(--color-white) !important;
+}
+
+nav.main .container-fluid .collapse .navbar-nav .nav-item a.active,
+nav.main .container-fluid .collapse .navbar-nav .nav-item a:hover {
+  background: var(--color-white);
+  color: var(--color-main) !important;
+}
+
+nav.main .container-fluid .collapse .navbar-nav .nav-item a svg {
+  margin: 0 auto;
+}
+
+.navbar .profile button {
+  border: none;
+  border-radius: 0;
+  background-color: var(--color-main);
+}
+
+.navbar .profile ul.dropdown-menu {
+  border-radius: 0;
+  border: none;
+  box-shadow: 0 0 2px;
+  margin-top: 10px;
+}
+
+.navbar .profile a.dropdown-item {
+  color: var(--text);
+  text-align: start;
+}
+
+.navbar .profile a.dropdown-item:hover {
+  /* color: white; */
+  background-color: var(--bg-second);
+}
+
+@media (max-width: 900px) {
+  nav.main .container-fluid .collapse .navbar-nav .nav-item a {
+    display: block;
+    text-align: start;
+  }
+
+  nav.main .container-fluid .collapse .navbar-nav .nav-item a.active {
+    background: var(--color-white) !important;
+    color: var(--color-main);
+  }
+}
+
+/* Secont navbar */
+.container-fluid .nav-pills .nav-item button:hover,
+.container-fluid .nav-pills .nav-item button.active {
+  border-bottom: var(--color-main) 2px solid;
+}
+
+.container-fluid .mb-second {
+  display: none;
+  text-align: center;
+  margin: 1rem 0;
+  cursor: pointer;
+}
+
+.container-fluid .mb-second {
+  color: var(--text) !important;
+}
+
+@media (max-width: 900px) {
+  .container-fluid .mb-second {
+    display: block;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .container-fluid .nav-pills {
+    display: none;
+    padding: 2rem;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .container-fluid .nav-pills.active {
+    display: block;
+  }
+
+  .container-fluid .nav-pills .nav-item {
+    display: flex;
+    align-items: start;
+  }
+
+  .container-fluid .nav-pills .nav-item button {
+    margin: 0 auto;
+  }
+
+  .container-fluid .nav-pills .nav-item button {
+    width: 100%;
+    text-align: start;
+    margin: 0.3rem 0;
+  }
+
+  .container-fluid .nav-pills .nav-item button.active,
+  .container-fluid .nav-pills .nav-item button:hover {
+    border: none;
+    border-right: 2px solid var(--color-main) !important;
+    background-color: var(--color-gray);
+  }
+}
+
+@media (max-width: 700px) {
+  .container-fluid .nav-pills {
+    display: none;
+    padding: 0.5rem;
+  }
+}
+
+/* /Main Navbar */
+
+/* Table */
+table tbody {
+  border-top: 3px solid var(--color-main);
+}
+
+.table-responsive table tr th {
+  font-size: var(--size-b-m);
+  white-space: nowrap;
+}
+
+.table-responsive tbody tr td {
+  font-size: var(--size-b-s);
+  word-wrap: break-word;
+}
+
+/* /Table */
+
+/* Info tables */
+.title {
+  font-weight: 500;
+  font-size: var(--size-t-l);
+  /* color: var(--text); */
+  /* background-color: #3A3541; */
+}
+
+.functions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.functions .border {
+  border-color: var(--color-border);
+}
+
+.functions .border .number_of_s {
+  background: var(--color-gray);
+  border-radius: 5px;
+}
+
+.functions a.btn {
+  background-color: var(--color-main);
+  border: none;
+  outline: none;
+}
+
+.functions a.btn:hover {
+  color: var(--color-main);
+  background-color: var(--color-gray);
+}
+
+.functions input {
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  background-color: var(--bg-main);
+  padding: 6px;
+}
+
+.functions a.btn i {
+  color: var(--color-main);
+}
+
+.functions a.btn:hover i {
+  color: var(--color-white);
+}
+
+@media (max-width: 600px) {
+  .title {
+    font-weight: 500;
+    font-size: var(--size-t-m);
+  }
+
+  .functions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .functions .border {
+    width: fit-content;
+  }
+
+  .functions a.btn {
+    display: flex;
+    gap: 3px;
+    align-items: center;
+    font-size: var(--size-b-s);
+  }
+
+  .functions a.btn i {
+    display: block;
+    padding-top: 2px;
+  }
+
+  .functions input {
+    font-size: var(--size-b-s);
+  }
+
+  .functions .border .number_of_s {
+    font-size: var(--size-b-s);
+  }
+}
+
+/* /Info tables */
+
+/* Filter */
+.filter-form .btn {
+  background-color: var(--color-main);
+  border: none;
+}
+
+.filter-form .btn:hover {
+  background-color: var(--color-main) !important;
+  color: var(--color-white) !important;
+}
+
+a.filter {
+  background-color: var(--color-main) !important;
+  color: var(--color-white);
+}
+
+a.filter:hover {
+  background-color: var(--color-gray) !important;
+  color: var(--color-main) !important;
+}
+
+.filter-section {
+  display: none;
+}
+
+.filter-section.active {
+  display: block;
+}
+
+.filter-section .card {
+  background: var(--color-gray);
+}
+
+/* /Filter */
+
+/* Tabs Styles */
+.nav-pills .nav-item button {
+  border-radius: 0;
+  color: var(--text);
+  margin: 2px;
+}
+
+.nav-pills .nav-item button.active {
+  color: var(--text);
+  background-color: var(--color-white);
+  border-bottom: 2px solid var(--color-main);
+}
+
+.nav-pills .nav-item button:hover {
+  border-bottom: 2px solid var(--color-main);
+}
+
+/* /Tabs Styles */
+
+/* Section 2 */
+
+.second a.btn {
+  background-color: var(--color-main);
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  font-size: var(--size-t-m);
+}
+
+.second .btn:hover {
+  background: var(--color-gray);
+  color: var(--color-main);
+}
+
+.second .btn:active {
+  background: var(--color-gray);
+  color: var(--color-main);
+}
+
+.second .teaching-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+@media (max-width: 500px) {
+  .second .teaching-links {
+    display: grid;
+    gap: 1rem;
+    margin-top: 3rem;
+  }
+}
+
+.pagination .page-item .page-link {
+  background: var(--color-gray);
+  box-shadow: none;
+  color: var(--color-main);
+}
+
+.pagination .page-item.active .page-link {
+  box-shadow: none;
+  border: 1px solid var(--color-main);
+  background: var(--color-main);
+  color: var(--color-gray);
+  cursor: not-allowed;
+}
+
+.products_table {
+  margin-bottom: 0 !important;
+}
