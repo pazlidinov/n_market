@@ -1,0 +1,125 @@
+.wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.auth-block {
+    width: 600px;
+    box-shadow: 0 0 25px var(--color-border);
+    border-radius: 20px;
+    height: 45%;
+    padding: 30px 40px;
+}
+
+.register-block-h2 {
+    font-size: var(--size-d-l);
+    color: var(--color-black);
+}
+
+.auth-block-h2 {
+    font-size: 48px;
+    color: var(--auth-h2);
+    font-weight: 600;
+    margin-bottom: 32px;
+}
+
+.auth-block-p {
+    display: flex;
+    align-items: center;
+    margin-top: 32px;
+    font-size: var(--size-b-m);
+    color: var(--text);
+}
+
+.auth-block-p a {
+    margin-left: 5px;
+    color: var(--color-black);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.auth-block-form .auth-input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 20px 8px 15px;
+    border-radius: 12px;
+    margin-top: 15px;
+    background-color: var(--bg-main);
+}
+
+.auth-block-form input::placeholder {
+    color: var(--color-black);
+}
+
+.auth-block-form input {
+    width: 100%;
+    font-size: var(--size-t-s);
+    outline: none;
+    font-weight: 600;
+    padding: 8px 50px 8px 15px;
+    color: var(--color-black);
+    background-color: transparent;
+    border: none;
+    display: block;
+}
+
+.auth-block-form button {
+    width: 100%;
+    height: 50px;
+    font-size: var(--size-t-l);
+    border: none;
+    color: var(--color-white);
+    border-radius: 12px;
+    background-color: var(--color-main);
+    margin-top: 15px;
+    transition: 0.5s ease;
+}
+
+.auth-block-form button:hover {
+    background-color: rgba(18, 211, 21, 0.7);
+}
+
+.auth-password_shower {
+    display: block;
+    cursor: pointer;
+}
+
+@media (max-width:600px) {
+    .register-block-h2 {
+        font-size: var(--size-h-s);
+    }
+
+    .auth-block-h2 {
+        font-size: 35px;
+        margin-bottom: 20px;
+    }
+
+    .auth-block-p a {
+        margin-left: 2px;
+    }
+
+    .auth-block-form input {
+        width: 100%;
+        margin: 5px 0;
+        font-size: var(--size-b-s);
+        padding: 6px 0px 6px 16px;
+    }
+
+    .auth-block-p {
+        display: flex;
+        flex-wrap: wrap;
+        font-size: var(--size-b-s);
+    }
+
+    .auth-block-form button {
+        height: 40px;
+        font-size: var(--size-t-s);
+    }
+
+    .auth-block-form span {
+        padding: 3px 6px 3px 15px;
+    }
+}
