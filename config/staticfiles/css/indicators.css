@@ -10,9 +10,22 @@
 
 .indicator__buttons .indicator__btn {
   border: 1px solid var(--color-border);
-  border-radius: 0.2rem;
+  background: var(--color-gray);
   padding: 0.2rem 0.6rem;
-  margin: 0;
+  margin: -1px;
+}
+
+.indicator__btn:first-child {
+  border-radius: 0.3rem 0 0 0.3rem;
+}
+
+.indicator__btn:last-child {
+  border-radius: 0 0.3rem 0.3rem 0;
+}
+
+.indicator__btn.active {
+  background: var(--color-main);
+  color: var(--color-white);
 }
 
 .today__result {
@@ -53,12 +66,12 @@ canvas {
   gap: 6rem;
 }
 
-.table,
+/* .table,
 thead,
 tbody {
   overflow-x: scroll;
-}
+} */
 
 table tbody {
-  border-top: 3px solid #186999;
+  border-top: 3px solid var(--color-main);
 }

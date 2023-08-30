@@ -1,17 +1,18 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Css Links -->
+    <link rel="stylesheet" href="{% static 'assets/main-css/root.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/main-css/main.css' %}" />
+
     <link rel="stylesheet" href="{% static 'css/indicators.css' %}" />
     <link rel="stylesheet" href="{% static 'css/media/indicators-media.css' %}" />
-
-    <link rel="stylesheet" href="{% static 'assets/main-css/root.css' %}" />
-    <link rel="stylesheet" href="{% static 'assets/main-css/navbar.css' %}" />
 
     <!-- Bootstrap Links -->
     <link rel="stylesheet" href="{% static 'assets/bootstrap/bootstrap.min.css' %}" />
@@ -20,107 +21,112 @@
     <link rel="stylesheet" href="{% static 'assets/icons/all.css' %}" />
 
     {% block title %}
-      
-    {% endblock title %}
 
+    {% endblock title %}
 
 </head>
 
 <body>
-  <!-- Main Navbar -->
-  <nav class="main navbar navbar-expand-lg navbar-dark">
-    <div class="container-fluid">
+    <!-- Main Navbar -->
+    <nav class="main navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid px-2 px-md-5">
+            <div class="profile navbar-brand">
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle p-2 fs-5" type="button" id="dropdownMenuButton1"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fa-solid fa-circle-user fa-2xl"></i>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li class="dropdown-header">
+                            <h6>Abdulloh Tursunboyev</h6>
+                            <p>rr006itwashard@gmail.com</p>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider" />
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">Foydalanuvchi sozlamalari</a>
+                        </li>
+                        <li><a class="dropdown-item" href="#">Sozlamalar</a></li>
+                        <li>
+                            <hr class="dropdown-divider" />
+                        </li>
+                        <li><a class="dropdown-item" href="#">Yangiliklar</a></li>
+                        <li><a class="dropdown-item" href="#">Maxsus takliflar</a></li>
+                        <li><a class="dropdown-item" href="#">Ilovalar</a></li>
+                        <li><a class="dropdown-item" href="#">Obuna</a></li>
+                        <li>
+                            <hr class="dropdown-divider" />
+                        </li>
+                        <li><a class="dropdown-item" href="#">Chiqish</a></li>
+                    </ul>
+                </div>
+            </div>
 
-      <div class="profile navbar-brand">
-        <div class="dropdown">
-          <button class="btn btn-secondary dropdown-toggle p-2 fs-5" type="button" id="dropdownMenuButton1"
-            data-bs-toggle="dropdown" aria-expanded="false">
-            <i class="fa-solid fa-circle-user fa-2xl"></i>
-          </button>
-          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-            <li class="dropdown-header">
-              <h6>Abdulloh Tursunboyev</h6>
-              <p>rr006itwashard@gmail.com</p>
-            </li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-            <li><a class="dropdown-item" href="#">Foydalanuvchi sozlamalari</a></li>
-            <li><a class="dropdown-item" href="#">Sozlamalar</a></li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-            <li><a class="dropdown-item" href="#">Yangiliklar</a></li>
-            <li><a class="dropdown-item" href="#">Maxsus takliflar</a></li>
-            <li><a class="dropdown-item" href="#">Ilovalar</a></li>
-            <li><a class="dropdown-item" href="#">Obuna</a></li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-            <li><a class="dropdown-item" href="#">Chiqish</a></li>
-          </ul>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ms-auto mb-2 py-2 py-md-0">
+                    <li class="nav-item my-1 my-lg-0">
+                        <a href="../indocators/indicators.html" class="nav-link active p-2 text-white"><i
+                                class="fa-solid fa-arrow-up-right-dots"></i>
+                            Ko'rsatkichlar</a>
+                    </li>
+                    <li class="nav-item my-1 my-lg-0">
+                        <a href="../purchases/providers_order.html" class="nav-link p-2 text-white"><i
+                                class="fa-solid fa-cart-shopping"></i> Xaridlar</a>
+                    </li>
+                    <li class="nav-item my-1 my-lg-0">
+                        <a href="../sales/sales.html" class="nav-link p-2 text-white"><i
+                                class="fa-solid fa-bag-shopping"></i>
+                            Sotilganlar</a>
+                    </li>
+                    <li class="nav-item my-1 my-lg-0">
+                        <a href="../products/products.html" class="nav-link p-2 text-white"><i
+                                class="fa-solid fa-bag-shopping"></i>
+                            Mahsulotlar</a>
+                    </li>
+                    <li class="nav-item my-1 my-lg-0">
+                        <a href="../contragents/contagents.html" class="nav-link p-2 text-white"><i
+                                class="fa-solid fa-user-group"></i> Kontragentlar</a>
+                    </li>
+                    <li class="nav-item my-1 my-lg-0">
+                        <a href="../money/payments.html" class="nav-link p-2 text-white"><i
+                                class="fa-solid fa-wallet"></i>
+                            Pullar</a>
+                    </li>
+                    <li class="nav-item my-1 my-lg-0">
+                        <a href="../retail/sales-points.html" class="nav-link p-2 text-white"><i
+                                class="fa-solid fa-shop"></i>
+                            Chakana savdo</a>
+                    </li>
+                    <li class="nav-item my-1 my-lg-0">
+                        <a href="../production/production.html" class="nav-link p-2 text-white"><i
+                                class="fa-solid fa-industry"></i>
+                            Ishlab chiqarish</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-      </div>
+    </nav>
+    {% block content %}
+      
+    {% endblock content %}
+    <!-- Chart Js -->
+  <script src="{% static 'assets/chart/chart.js' %}"></script>
+  <script src="{% static 'js/indicators-chart.js' %}"></script>
 
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+  <!-- Bootstrap JS Links -->
+  <script src="{% static 'assets/bootstrap/bootstrap.min.js' %}"></script>
+  <script src="{% static 'assets/bootstrap/poppins.js' %}"></script>
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a href="../indocators/indicators.html" class="nav-link active"><i
-                class="fa-solid fa-arrow-up-right-dots"></i> Ko'rsatkichlar</a>
-          </li>
-          <li class="nav-item">
-            <a href="../purchases/providers_order.html" class="nav-link"><i class="fa-solid fa-cart-shopping"></i>
-              Xaridlar</a>
-          </li>
-          <li class="nav-item">
-            <a href="../sales/customers_order.html" class="nav-link"><i class="fa-solid fa-bag-shopping"></i>
-              Sotilganlar</a>
-          </li>
-          <li class="nav-item">
-            <a href="../products/orders_and_services.html" class="nav-link"><i class="fa-solid fa-bag-shopping"></i>
-              Mahsulotlar</a>
-          </li>
-          <li class="nav-item">
-            <a href="../contragents/contagents.html" class="nav-link"><i class="fa-solid fa-user-group"></i>
-              Kontragentlar</a>
-          </li>
-          <li class="nav-item">
-            <a href="../money/payments.html" class="nav-link"><i class="fa-solid fa-wallet"></i> Pullar</a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link"><i class="fa-solid fa-shop"></i> Chakana savdo</a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link"><i class="fa-solid fa-industry"></i> Ishlab chiqarish</a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link"><i class="fa-solid fa-list-check"></i> Vazifalar</a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link"><i class="fa-solid fa-grip"></i> Ilovalar</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  {% block content %}
-    
-  {% endblock content %}
- <!-- Chart Js -->
- <script src="{% static 'assets/chart/chart.js' %}"></script>
- <script src="{% static 'js/indicators-chart.js' %}"></script>
-
- <!-- Bootstrap JS Links -->
- <script src="{% static 'assets/bootstrap/bootstrap.min.js' %}"></script>
- <script src="{% static 'assets/bootstrap/poppins.js' %}"></script>
-
- <!-- Font Awesome Links -->
- <script src="{% static 'assets/icons/all.js' %}"></script>
+  <!-- Font Awesome Links -->
+  <script src="{% static 'assets/icons/all.js' %}"></script>
+  <script src="{% static 'assets/main-js/main.js' %}"></script>
 </body>
 
 </html>
