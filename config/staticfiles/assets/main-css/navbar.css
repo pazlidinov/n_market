@@ -91,3 +91,22 @@ nav.main .container-fluid .collapse .navbar-nav .nav-item a svg {
     border-right: 2px solid var(--color-main) !important;
   }
 }
+
+
+/* Footer */
+body {
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Footer */
+.footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 10px 0;
+  background-color: var(--color-main);
+  color: var(--color-white);
+  text-align: center;
+}

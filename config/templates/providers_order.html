@@ -1,0 +1,648 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+<title>Sotuvlar bo'limi</title>
+{% endblock title %}
+{% block content %}
+<!-- Tabs -->
+<div class="container-fluid px-2 px-md-5">
+  <a class="mb-second"><i class="fa-solid fa-down-long"></i></a>
+  <nav class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" href="#pills-home" role="tab"
+        aria-controls="pills-home" aria-selected="true">
+        Yetkazib beruvchilar buyurtmalari
+      </button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" href="#pills-profile" role="tab"
+        aria-controls="pills-profile" aria-selected="false">
+        Yetkazib beruvchining hisob-fakturalari
+      </button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" href="#pills-profile2" role="tab"
+        aria-controls="pills-profile" aria-selected="false">
+        Qabullar
+      </button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" href="#pills-profile3" role="tab"
+        aria-controls="pills-profile" aria-selected="false">
+        Yetkazib beruvchilarga qaytarildi
+      </button>
+    </li>
+  </nav>
+  <!-- Tabs -->
+
+  <div class="container-fluid px-2 px-md-5 py-4">
+    <div class="tab-content" id="pills-tabContent">
+      <div class="tab-pane fade active show" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+        <!-- Start 1-st tab -->
+        <section class="first">
+          <p class="title">Yetkazib beruvchilarga buyurtmalar</p>
+          <div class="functions">
+            <div class="border border-2 rounded p-1 d-flex gap-1">
+              <a class="btn btn-primary" href='../forms/forms.html'><i class="fa-solid fa-plus"></i> Buyurtma</a>
+              <input type="text" placeholder="Raqam yoki komentariya" />
+            </div>
+
+            <div class="border border-2 rounded p-1 d-flex gap-1">
+              <div class="number_of_s px-2 d-flex align-items-center">
+                0
+              </div>
+              <div class="dropdown">
+                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                  data-bs-toggle="dropdown" aria-expanded="false">
+                  O'zgartirish
+                </a>
+
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Another action</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="dropdown">
+                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                  data-bs-toggle="dropdown" aria-expanded="false">
+                  Holat
+                </a>
+
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Another action</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </li>
+                </ul>
+              </div>
+              <!-- BU KERELI BO"LISHI MUMKIN -->
+              <!-- <div class="dropdown">
+                    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                      Yaratish
+                    </a>
+                  
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                  </div> -->
+              <div class="dropdown">
+                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                  data-bs-toggle="dropdown" aria-expanded="false">
+                  <i class="fa-solid fa-print"></i> Chop etish
+                </a>
+
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Another action</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="border border-2 rounded p-1">
+              <a class="btn btn-primary"><i class="fa-solid fa-gear"></i></a>
+            </div>
+          </div>
+        </section>
+
+        <!-- *** -->
+        <section class="second mt-5">
+          <p class="h2 fw-bold">
+            Buyurtmalarni yarating va etkazib beruvchilarga yuboring
+          </p>
+          <a class="btn btn-primary p-3 mt-4" href='../forms/forms.html'>Buyurtma yaratish <i
+              class="fa-solid fa-plus"></i></a>
+          <p class="mt-4">
+            Mahsulot omborda ko'rinishi uchun xariddan so'ng
+            <a href="#" class="text-decoration-none">kvitansiya</a> yarating
+          </p>
+          <div class="teaching-links">
+            <a href="#" class="text-decoration-none"><i class="fa-solid fa-book"></i> Buyurtma bo'yicha
+              qo'llanma</a>
+            <a href="#" class="text-decoration-none"><i class="fa-solid fa-display"></i> O'quv video</a>
+            <a href="#" class="text-decoration-none"><i class="fa-solid fa-display"></i> Batafsil video kurs</a>
+          </div>
+        </section>
+        <!-- End of 1-st tab -->
+      </div>
+      <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+        <!-- Start of 2nd tab -->
+        <section class="first">
+          <p class="title">Yetkazib beruvchining hisob-fakturalari</p>
+          <div class="functions">
+            <div class="border border-2 rounded p-1 d-flex gap-1">
+              <a class="btn btn-primary" href='../forms/forms.html'><i class="fa-solid fa-plus"></i> Buyurtma</a>
+              <a class="btn btn-primary filter">Filter</a>
+              <input type="text" placeholder="Raqam yoki komentariya" />
+            </div>
+
+            <div class="border border-2 rounded p-1 d-flex gap-1">
+              <div class="number_of_s px-2 d-flex align-items-center">
+                0
+              </div>
+              <div class="dropdown">
+                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                  data-bs-toggle="dropdown" aria-expanded="false">
+                  O'zgartirish
+                </a>
+
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Another action</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="dropdown">
+                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                  data-bs-toggle="dropdown" aria-expanded="false">
+                  Holat
+                </a>
+
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Another action</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </li>
+                </ul>
+              </div>
+              <!-- BU KERELI BO"LISHI MUMKIN -->
+              <!-- <div class="dropdown">
+                      <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                        Yaratish
+                      </a>
+                    
+                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                      </ul>
+                    </div> -->
+              <div class="dropdown">
+                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                  data-bs-toggle="dropdown" aria-expanded="false">
+                  <i class="fa-solid fa-print"></i> Chop etish
+                </a>
+
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Another action</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="border border-2 rounded p-1">
+              <a class="btn btn-primary"><i class="fa-solid fa-gear"></i></a>
+            </div>
+          </div>
+        </section>
+
+        <!-- Filter Form -->
+        <section class="filter-section mt-3">
+          <div class="card py-2 px-3 px-md-4 py-md-3">
+            <form class="filter-form" action="">
+              <div class="row">
+                <div class="col-12 col-md-4 col-lg-3 my-1">
+                  <div>
+                    <label for="period" class="form-label">Davr</label>
+                    <div class="input-group">
+                      <input type="date" id="period" aria-label="First name" class="form-control" />
+                      <span class="input-group-text">--</span>
+                      <input type="date" id="period" aria-label="Last name" class="form-control" />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-12 col-md-4 col-lg-3 my-1">
+                  <div>
+                    <label for="product" class="form-label">Tovar yoki gruppa</label>
+                    <select class="form-select" aria-label="Default select example" id="product">
+                      <option selected>something</option>
+                      <option value="1">something</option>
+                      <option value="2">something</option>
+                      <option value="3">something</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="col-12 col-md-4 col-lg-3 my-1">
+                  <div>
+                    <label for="stock" class="form-label">Ombor</label>
+                    <select class="form-select" aria-label="Default select example" id="stock">
+                      <option selected>something</option>
+                      <option value="1">something</option>
+                      <option value="2">something</option>
+                      <option value="3">something</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="col-12 col-md-4 col-lg-3 my-1">
+                  <div>
+                    <label for="status" class="form-label">Status</label>
+                    <select class="form-select" aria-label="Default select example" id="status">
+                      <option selected>something</option>
+                      <option value="1">something</option>
+                      <option value="2">something</option>
+                      <option value="3">something</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <a class="btn btn-success filter mt-3">Submit</a>
+            </form>
+          </div>
+        </section>
+
+        <!-- Table -->
+        <div class="table products_table mt-4">
+          <div class="table-responsive pt-3">
+            <table class="table table-bordered overflow-scroll">
+              <thead>
+                <tr>
+                  <th scope="col">№</th>
+                  <th scope="col">Vaqt</th>
+                  <th scope="col">Zaxiradan</th>
+                  <th scope="col">Tashkilot</th>
+                  <th scope="col">Kontragent</th>
+                  <th scope="col">Yuborilgan summa</th>
+                  <th scope="col">Napechatno</th>
+                  <th scope="col">Komentariya</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td></td>
+                  <td>0 dan 1-1</td>
+                  <td></td>
+                  <td></td>
+                  <td>0.0</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <ul class="pagination justify-content-end">
+            <li class="page-item">
+              <a class="page-link" href="#" tabindex="-1">Previous</a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item active disabled"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+              <a class="page-link" href="#">Next</a>
+            </li>
+          </ul>
+        </div>
+        <!-- End of 2nd tab -->
+      </div>
+
+      <!-- Start of 3rd tab-->
+      <div class="tab-pane fade" id="pills-profile2" role="tabpanel" aria-labelledby="pills-profile-tab">
+        <!-- *** -->
+        <section class="first">
+          <p class="title">Qabullar</p>
+          <div class="functions">
+            <div class="border border-2 rounded p-1 d-flex gap-1">
+              <a class="btn btn-primary" href='../forms/forms.html'><i class="fa-solid fa-plus"></i> Qabul qilish</a>
+              <input type="text" placeholder="Raqam yoki komentariya" />
+            </div>
+            <div class="border border-2 rounded p-1 d-flex gap-1">
+              <div class="number_of_s px-2 d-flex align-items-center">
+                0
+              </div>
+              <div class="dropdown">
+                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                  data-bs-toggle="dropdown" aria-expanded="false">
+                  O'zgartirish
+                </a>
+
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Another action</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="dropdown">
+                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                  data-bs-toggle="dropdown" aria-expanded="false">
+                  Holat
+                </a>
+
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Another action</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </li>
+                </ul>
+              </div>
+              <!-- BU KERELI BO"LISHI MUMKIN -->
+              <!-- <div class="dropdown">
+                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                  Yaratish
+                </a>
+              
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </div> -->
+              <div class="dropdown">
+                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                  data-bs-toggle="dropdown" aria-expanded="false">
+                  <i class="fa-solid fa-print"></i> Chop etish
+                </a>
+
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Another action</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="border border-2 rounded p-1 d-flex gap-1">
+              <div class="dropdown">
+                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                  data-bs-toggle="dropdown" aria-expanded="false">
+                  EDO
+                </a>
+
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Another action</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </li>
+                </ul>
+              </div>
+              <a class="btn btn-primary"><i class="fa-solid fa-gear"></i></a>
+            </div>
+          </div>
+        </section>
+
+        <!-- *** -->
+        <section class="second mt-5">
+          <p class="h2 fw-bold">
+            Qabullarni belgilang va xaridlarni hisobga oling
+          </p>
+          <a class="btn btn-primary p-3 mt-4" href='../forms/forms.html'>Qabullarni yaratish <i
+              class="fa-solid fa-plus"></i></a>
+          <p class="mt-4">
+            Qabullar elektron hujjat aylanishi tizimidan
+            <a href="#" class="text-decoration-none">import qilinishi</a>
+            mumkin (EDO)
+          </p>
+          <div class="teaching-links">
+            <a href="#" class="text-decoration-none"><i class="fa-solid fa-book"></i> Tovarlarni qabul qilish
+              bo'yicha qo'llanma</a>
+            <a href="#" class="text-decoration-none"><i class="fa-solid fa-display"></i> O'quv video</a>
+            <a href="#" class="text-decoration-none"><i class="fa-solid fa-display"></i> Batafsil video kurs</a>
+          </div>
+        </section>
+      </div>
+      <!-- End of 3rd tab -->
+
+      <!-- Start of 4th tab -->
+      <div class="tab-pane fade" id="pills-profile3" role="tabpanel" aria-labelledby="pills-profile-tab">
+        <!-- *** -->
+        <section class="first">
+          <p class="title">Yetkazib beruvchilarga qaytariladi</p>
+          <div class="functions">
+            <div class="border border-2 rounded p-1 d-flex gap-1">
+              <a class="btn btn-primary" href='../forms/forms.html'><i class="fa-solid fa-plus"></i> Buyurtma</a>
+              <a class="btn btn-primary filter">Filter</a>
+              <input type="text" placeholder="Raqam yoki komentariya" />
+            </div>
+
+            <div class="border border-2 rounded p-1 d-flex gap-1">
+              <div class="number_of_s px-2 d-flex align-items-center">
+                0
+              </div>
+              <div class="dropdown">
+                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                  data-bs-toggle="dropdown" aria-expanded="false">
+                  O'zgartirish
+                </a>
+
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Another action</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="dropdown">
+                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                  data-bs-toggle="dropdown" aria-expanded="false">
+                  Holat
+                </a>
+
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Another action</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </li>
+                </ul>
+              </div>
+              <!-- BU KERELI BO"LISHI MUMKIN -->
+              <!-- <div class="dropdown">
+                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                  Yaratish
+                </a>
+              
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </div> -->
+              <div class="dropdown">
+                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                  data-bs-toggle="dropdown" aria-expanded="false">
+                  <i class="fa-solid fa-print"></i> Chop etish
+                </a>
+
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Another action</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="border border-2 rounded p-1">
+              <a class="btn btn-primary"><i class="fa-solid fa-gear"></i></a>
+            </div>
+          </div>
+        </section>
+
+        <!-- Filter Form -->
+        <section class="filter-section mt-3">
+          <div class="card py-2 px-3 px-md-4 py-md-3">
+            <form class="filter-form" action="">
+              <div class="row">
+                <div class="col-12 col-md-4 col-lg-3 my-1">
+                  <div>
+                    <label for="period" class="form-label">Davr</label>
+                    <div class="input-group">
+                      <input type="date" id="period" aria-label="First name" class="form-control" />
+                      <span class="input-group-text">--</span>
+                      <input type="date" id="period" aria-label="Last name" class="form-control" />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-12 col-md-4 col-lg-3 my-1">
+                  <div>
+                    <label for="product" class="form-label">Tovar yoki gruppa</label>
+                    <select class="form-select" aria-label="Default select example" id="product">
+                      <option selected>something</option>
+                      <option value="1">something</option>
+                      <option value="2">something</option>
+                      <option value="3">something</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="col-12 col-md-4 col-lg-3 my-1">
+                  <div>
+                    <label for="stock" class="form-label">Ombor</label>
+                    <select class="form-select" aria-label="Default select example" id="stock">
+                      <option selected>something</option>
+                      <option value="1">something</option>
+                      <option value="2">something</option>
+                      <option value="3">something</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="col-12 col-md-4 col-lg-3 my-1">
+                  <div>
+                    <label for="status" class="form-label">Status</label>
+                    <select class="form-select" aria-label="Default select example" id="status">
+                      <option selected>something</option>
+                      <option value="1">something</option>
+                      <option value="2">something</option>
+                      <option value="3">something</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <a class="btn btn-success filter mt-3">Submit</a>
+            </form>
+          </div>
+        </section>
+
+        <!-- Table -->
+        <div class="table products_table mt-4">
+          <div class="table-responsive pt-3">
+            <table class="table table-bordered overflow-scroll">
+              <thead>
+                <tr>
+                  <th scope="col">№</th>
+                  <th scope="col">Vaqt</th>
+                  <th scope="col">Zaxiradan</th>
+                  <th scope="col">Tashkilot</th>
+                  <th scope="col">Kontragent</th>
+                  <th scope="col">Yuborilgan summa</th>
+                  <th scope="col">Napechatno</th>
+                  <th scope="col">Komentariya</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td></td>
+                  <td>0 dan 1-1</td>
+                  <td></td>
+                  <td></td>
+                  <td>0.0</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <ul class="pagination justify-content-end">
+            <li class="page-item">
+              <a class="page-link" href="#" tabindex="-1">Previous</a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item active disabled"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+              <a class="page-link" href="#">Next</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- End of 4th tab -->
+    </div>
+  </div>
+</div>
+<!-- Form Section -->
+<div class="container-fluid container-md-lg">
+  <section class="form-section bg-grey p-5"></section>
+</div>
+<script>
+  let indicator__btns = document.querySelectorAll(".indicator__btn");
+  indicator__btns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      indicator__btns.forEach((el) => {
+        el.classList.remove("active");
+      });
+      btn.classList.add("active");
+    });
+  });
+</script>
+{% endblock content %}

@@ -3,6 +3,7 @@
   src: url(".");
 }
 
+
 input,
 button {
   font-family: "Secondary";
@@ -341,4 +342,18 @@ a.filter:hover {
 
 .products_table {
   margin-bottom: 0 !important;
+}
+
+
+/* Footer */
+.footer {
+  /* position: relative; */
+  margin-top: auto;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 10px 0;
+  background-color: var(--color-main);
+  color: var(--color-white);
+  text-align: center;
 }
