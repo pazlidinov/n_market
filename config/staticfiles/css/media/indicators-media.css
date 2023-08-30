@@ -1,0 +1,30 @@
+@media only screen and (max-width: 1250px) {
+  .indicators-container {
+    width: 90%;
+    margin: 3rem auto;
+  }
+
+  .today__result {
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .today__result .today-result-all .result__body .result__info p {
+    display: inline-block;
+    margin: 0 0.3rem;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .today__result {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+  }
+}
