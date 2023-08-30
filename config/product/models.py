@@ -1,5 +1,5 @@
 from django.db import models
-
+from django.contrib.auth.models import User
 # Create your models here.
 
 
@@ -26,7 +26,7 @@ class Branch(models.Model):
     slug = models.SlugField(max_length=150)
     adress = models.TextField(blank=True, null=True)
     phone_number = models.IntegerField(blank=True, null=True)
-    manager = models.ForeignKey(User, related_name="brand_manager")
+    manager = models.ForeignKey(User,on_delete=models.PROTECT, related_name="brand_manager")
 
     def __str__(self):
         return self.name
@@ -82,7 +82,7 @@ class Product(models.Model):
     measure = models.ForeignKey(
         Measure, on_delete=models.PROTECT, related_name='pr_measure')
     status = models.ForeignKey(
-        Status, on_delete=models.PROTECT, related_name='pr_status')
+        StatusProduct, on_delete=models.PROTECT, related_name='pr_status')
     produser = models.ForeignKey(
         Producer, on_delete=models.PROTECT, related_name='pr_producer')
 
