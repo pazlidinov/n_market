@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,15 +7,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Css Links -->
-    <link rel="stylesheet" href="../assets/main-css/root.css" />
-    <link rel="stylesheet" href="./auth.css" />
+    <link rel="stylesheet" href="{% static './assets/main-css/root.css' %}" />
+    <link rel="stylesheet" href="{% static './css/auth.css' %}" />
 
     <!-- Bootstrap Links -->
-    <link rel="stylesheet" href="../assets/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="{% static './assets/bootstrap/bootstrap.min.css' %}" />
 
     <!-- Font Awesome Link -->
-    <link rel="stylesheet" href="../assets/icons/all.css" />
-    <title>Ro'yxatdan o'tish</title>
+    <link rel="stylesheet" href="{% static './assets/icons/all.css' %}" />
+    <title>Kirish</title>
 </head>
 
 <body>
@@ -24,20 +25,26 @@
             <div class="auth-block">
                 <img src="" class="auth-block-logo">
                 <h2 class="auth-block-h2">Ro'yxatdan o'tish</h2>
-                <form action="" class="auth-block-form">
+
+
+                
+
+                <form method="POST" action="" class="auth-block-form">
+                    {% csrf_token %}
+                  
                     <span class="auth-input">
                         <i class="fa-solid fa-user"></i>
-                        <input type="text" placeholder="Foydalanuvchi nomi" required>
+                        <input type="text" name="username" placeholder="Foydalanuvchi nomi" required>
                     </span>
 
                     <span class="auth-input">
                         <i class="fa-regular fa-envelope"></i>
-                        <input type="email" placeholder="Email" required>
+                        <input type="email" name="email" placeholder="Email" required>
                     </span>
 
                     <span class="auth-input">
                         <i class="fa-solid fa-lock"></i>
-                        <input type="password" id="pdw" placeholder="Parol" required>
+                        <input type="password" name="password1" id="pdw" placeholder="Parol" required>
                         <span class="auth-password_shower">
                             <i class="fa-solid fa-eye "></i>
                         </span>
@@ -45,7 +52,7 @@
 
                     <span class="auth-input">
                         <i class="fa-solid fa-lock"></i>
-                        <input type="password" placeholder="Parolni qayta kiriting" required>
+                        <input type="password" name="password2" placeholder="Parolni qayta kiriting" required>
                         <span class="auth-password_shower">
                             <i class="fa-solid fa-eye "></i>
                         </span>
@@ -53,7 +60,7 @@
 
                     <button type="submit">Ro'yxatdan o'tish</button>
                     <p class="auth-block-p">
-                        Hisobingiz bormi?<a href="./login.html"> Kirish</a></p>
+                        Hisobingiz bormi?<a href="{% url 'accounts:login' %}"> Kirish</a></p>
                 </form>
             </div>
         </div>
@@ -63,9 +70,9 @@
 <!-- <script src="../assets/bootstrap/bootstrap.min.js"></script> -->
 <!-- <script src="../assets/bootstrap/poppins.js"></script> -->
 
-<script src="./script.js"></script>
+<script src="{% static './js/script.js' %}"></script>
 <!-- Font Awesome Links -->
-<script src="../assets/icons/all.js"></script>
+<script src="{% static './assets/icons/all.js' %}"></script>
 
 
 </html>
