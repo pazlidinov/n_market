@@ -27,14 +27,15 @@
             <div class="auth-block">       
                 <img src="" class="auth-block-logo">
                 <h2 class="auth-block-h2">Kirish</h2>
-                <form method="POST" action="" class="auth-block-form">
+                <form  action="" class="auth-block-form"  method="POST">
                     {% csrf_token %}
+         
                     <span class="auth-input">
                         <i class="fa-solid fa-user auth-icon"></i>
-                        <input type="email" name="email" placeholder="Login" required></span>
+                        <input type="text" name="username" placeholder="Login" required></span>
                     <span class="auth-input">
                         <i class="fa-solid fa-lock auth-icon"></i>
-                        <input type="password" name="password1" placeholder="Parol" required>
+                        <input type="password" name="password" placeholder="Parol" required>
                         <span class="auth-password_shower">
                             <i class="fa-solid fa-eye "></i>
                         </span>

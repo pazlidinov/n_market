@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'product',
-    'accounts'
+    'accounts',
+    'delivery'
 ]
 
 MIDDLEWARE = [
@@ -102,10 +103,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-LOGIN_URL = '/accounts/login/'
-LOGIN_REDIRECT_URL = '/'
-
-LOGOUT_URL = LOGIN_URL
 
 
 # Internationalization
@@ -119,7 +116,16 @@ USE_I18N = True
 
 USE_TZ = True
 
+# AUTH_USER_MODEL = "accounts.User"
 
+
+LOGIN_URL = 'accounts/login'
+# chiqish uchun url
+LOGOUT_URL = 'accounts/logout'
+# kirganidan song ochilishi kerak bolgan url
+LOGIN_REDIRECT_URL = '/'
+
+# AUTH_USER_MODEL = "accounts.User"
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 STATIC_URL = '/static/'
