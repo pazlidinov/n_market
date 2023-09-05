@@ -19,11 +19,9 @@ def register(request):
             user.save()
             # login new user
             login(request, user)
-            messages.add_message(request, messages.SUCCESS, "Well done !")
             return redirect("/")
         else:
-            messages.add_message(request, messages.WARNING,
-                                 "Something went wrong !")
+            form = UserCreationForm()
     else:
 
         return render(request, "auth/register.html", {"form": form})
