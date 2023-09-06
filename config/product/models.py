@@ -21,7 +21,7 @@ class Subcategory(models.Model):
         return self.name
 
 
-class Branch(models.Model):
+class Brand(models.Model):
     name = models.CharField(max_length=150)
     slug = models.SlugField(max_length=150)
     adress = models.TextField(blank=True, null=True)
@@ -40,16 +40,6 @@ class Measure(models.Model):
         return self.name
 
 
-class StatusProduct(models.Model):
-    STATUS = (
-        ('ready', 'Tayyor'),
-        ('being_prepared', 'Tayyorlanmoqda'),
-        ('not_available', 'Mavjud emas')
-    )
-    condition = models.CharField(choices=STATUS, max_length=50, blank=True)
-
-    def __str__(self):
-        return str(self.condition)
 
 
 class Producer(models.Model):
@@ -60,7 +50,11 @@ class Producer(models.Model):
     def __str__(self):
         return str(self.brand_name)
 
-
+STATUS = (
+        ('ready', 'Tayyor'),
+        ('being_prepared', 'Tayyorlanmoqda'),
+        ('not_available', 'Mavjud emas')
+    )
 class Product(models.Model):
     title = models.CharField(max_length=150)
     slug = models.SlugField(max_length=150)
@@ -72,17 +66,16 @@ class Product(models.Model):
     bar_code = models.ImageField(upload_to='product/bar_code/')
     min_count = models.IntegerField(blank=True, null=True)
     commentary = models.TextField(blank=True, null=True)
+    status = models.CharField(choices=STATUS, max_length=50, blank=True)
 
     category = models.ForeignKey(
         Category, on_delete=models.PROTECT, related_name='pr_category')
     subcategory = models.ForeignKey(
         Subcategory, on_delete=models.PROTECT, related_name='pr_subcategory')
-    branch = models.ForeignKey(
-        Branch, on_delete=models.PROTECT, related_name='pr_branch')
+    brand = models.ForeignKey(
+        Brand, on_delete=models.PROTECT, related_name='pr_branch')
     measure = models.ForeignKey(
         Measure, on_delete=models.PROTECT, related_name='pr_measure')
-    status = models.ForeignKey(
-        StatusProduct, on_delete=models.PROTECT, related_name='pr_status')
     produser = models.ForeignKey(
         Producer, on_delete=models.PROTECT, related_name='pr_producer')
 

@@ -2,7 +2,7 @@ from django.contrib import admin
 from .models import *
 # Register your models here.
 
-admin.site.register(StatusProduct)
+
 
 
 @admin.register(Category)
@@ -17,8 +17,8 @@ class SubcategoryAdmin(admin.ModelAdmin):
     prepopulated_fields = {"slug": ("name",)}
 
 
-@admin.register(Branch)
-class BranchAdmin(admin.ModelAdmin):
+@admin.register(Brand)
+class BrandAdmin(admin.ModelAdmin):
     list_display = ["id", 'name', 'manager']
     prepopulated_fields = {"slug": ("name",)}
 
@@ -35,7 +35,7 @@ class ProducerAdmin(admin.ModelAdmin):
     prepopulated_fields = {"slug": ("brand_name",)}
 
 
-@admin.register(Product)
-class ProductAdmin(admin.ModelAdmin):
-    list_display = ["id", 'title', 'slug']
-    prepopulated_fields = {"slug": ("title",)}
+@admin.register(SaledProduct)
+class SaledProductAdmin(admin.ModelAdmin):
+    list_display = ["id", 'cashier', 'product','count_product','time']
+    
