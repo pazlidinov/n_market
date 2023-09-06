@@ -15,7 +15,6 @@ def register(request):
                 group = Group.objects.get(name="user")
                 group.user_set.add(u)
             except Exception as er:
-                # raise
                 print(er)
             authenticate(u)
             return redirect("/accounts/login/")
