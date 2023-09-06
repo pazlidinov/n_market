@@ -1,0 +1,141 @@
+.functions-group {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.functions-group .border {
+  border-color: var(--color-border);
+  display: flex;
+  gap: 0.3rem;
+}
+
+/* .functions .border .number_of_s {
+  background: var(--bg-second);
+  border-radius: 5px;
+} */
+
+.functions-group a.btn {
+  background-color: var(--color-main);
+  border: none;
+  outline: none;
+}
+
+.functions-group a.btn:hover {
+  background-color: var(--color-gray);
+  color: var(--color-main);
+}
+
+.functions-group input {
+  border: none;
+  outline: none;
+  background-color: var(--bg-main);
+  padding: 6px;
+  width: 100%;
+}
+
+.functions-group a.btn i {
+  color: white;
+}
+
+@media (max-width: 500px) {
+  .title {
+    font-weight: 500;
+    font-size: var(--size-t-m);
+  }
+
+  .functions-group {
+    display: grid;
+    gap: 0.3rem;
+  }
+
+  .functions-group .border {
+    width: fit-content;
+    display: grid;
+    gap: 0.3rem;
+  }
+
+  .functions-group a.btn {
+    display: flex;
+    gap: 3px;
+    align-items: center;
+    font-size: 9px;
+  }
+
+  .functions-group a.btn i {
+    display: block;
+    padding-bottom: 2px;
+  }
+
+  .functions-group input {
+    font-size: 9px;
+  }
+
+  .functions-group .border .number_of_s {
+    font-size: 9px;
+  }
+}
+
+@media (max-width: 900px) {
+  .title {
+    font-weight: 500;
+    font-size: var(--size-t-m);
+  }
+
+  .functions-group {
+    display: grid;
+    gap: 0.5rem;
+  }
+
+  .functions-group .border {
+    width: fit-content;
+  }
+
+  .functions-group a.btn {
+    display: flex;
+    gap: 3px;
+    align-items: center;
+    font-size: var(--size-b-s);
+  }
+
+  .functions-group a.btn i {
+    display: block;
+    padding-top: 2px;
+  }
+
+  .functions-group input {
+    font-size: var(--size-b-s);
+  }
+
+  .functions-group .border .number_of_s {
+    font-size: var(--size-b-s);
+  }
+}
+
+/* Section 2 */
+
+.second-order a.btn {
+  background-color: var(--color-main);
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  font-size: large;
+}
+
+.second-order .btn:hover {
+  background-color: var(--color-gray);
+  color: var(--color-main);
+}
+
+.second-order .teaching-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+@media (max-width: 600px) {
+  .second-order .teaching-links {
+    display: grid;
+    gap: 1rem;
+    margin-top: 3rem;
+  }
+}

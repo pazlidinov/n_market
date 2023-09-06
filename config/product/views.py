@@ -9,3 +9,7 @@ class Indicators(TemplateView):
 
 class PurchaseView(TemplateView):
     template_name = 'providers_order.html'
+
+
+class ProductsView(TemplateView):
+    template_name = 'products.html'
