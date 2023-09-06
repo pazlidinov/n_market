@@ -97,7 +97,7 @@
             <li class="nav-item my-1 my-lg-0">
               <a
                 href="{% url 'product:indicators' %}"
-                class="nav-link active p-2 text-white"
+                class="nav-link  p-2 text-white"
                 ><i class="fa-solid fa-arrow-up-right-dots"></i>
                 Ko'rsatkichlar</a
               >
@@ -206,5 +206,15 @@
     <!-- Font Awesome Links -->
     <script src="{% static 'assets/icons/all.js' %}"></script>
     <script src="{% static 'assets/main-js/main.js' %}"></script>
+    <script>
+      let windows_url = window.location.href
+      let navbar_link=document.getElementsByTagName('a')
+   
+      for (let i = 0; i < navbar_link.length; i++){
+        if (navbar_link[i].href==windows_url){
+          navbar_link[i].classList.add('active')
+        }
+      }
+    </script>
   </body>
 </html>
