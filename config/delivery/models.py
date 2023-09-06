@@ -1,4 +1,5 @@
 from django.db import models
+
 from product.models import Product
 from django.contrib.auth.models import User
 
@@ -7,7 +8,7 @@ from django.contrib.auth.models import User
 
 
 class DeliveringCompany(models.Model):
-    company_name = models.CharField(max_length=150)
+    company_name = models.CharField(max_length=150) 
     slug = models.SlugField(max_length=150)
     inn = models.CharField(max_length=150)
     bank = models.CharField(max_length=150)
