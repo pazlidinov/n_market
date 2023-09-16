@@ -23,14 +23,14 @@ class DeliveringCompany(models.Model):
         verbose_name_plural = "Delivering Companies"    
 
 class DeliveredItem(models.Model):
+    product = models.ManyToManyField(Product, blank=True)
     company_name = models.ForeignKey(
         DeliveringCompany, on_delete=models.CASCADE, related_name='delivering_company', blank=True)
     count = models.FloatField(blank=True, null=True)
     price = models.IntegerField(default=0)
-    expenses = models.IntegerField(default=0)
+    extra_cost = models.IntegerField(default=0)
     delivered_date = models.DateTimeField(auto_now_add=True)
     region = models.CharField(max_length=150)
-    product = models.ManyToManyField(Product, blank=True)
     recipient = models.ForeignKey(User, on_delete=models.CASCADE, blank=True, null=True)
 
     def __str__(self):
