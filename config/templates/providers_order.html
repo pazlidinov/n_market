@@ -634,15 +634,4 @@
 <div class="container-fluid container-md-lg">
   <section class="form-section bg-grey p-5"></section>
 </div>
-<script>
-  let indicator__btns = document.querySelectorAll(".indicator__btn");
-  indicator__btns.forEach((btn) => {
-    btn.addEventListener("click", () => {
-      indicator__btns.forEach((el) => {
-        el.classList.remove("active");
-      });
-      btn.classList.add("active");
-    });
-  });
-</script>
 {% endblock content %}
