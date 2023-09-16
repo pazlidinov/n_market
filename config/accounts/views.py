@@ -10,13 +10,13 @@ def register(request):
     if request.method == "POST":
         form = UserCreationForm(request.POST)
         if form.is_valid():
-            u = form.save()
-            try:
-                group = Group.objects.get(name="user")
-                group.user_set.add(u)
-            except Exception as er:
-                print(er)
-            authenticate(u)
+            user = form.save()
+            # try:
+            #     group = Group.objects.get(name="user")
+            #     group.user_set.add(u)
+            # except Exception as er:
+            #     authenticate(u)
+            authenticate(user)
             return redirect("/accounts/login/")
         else:
             return render(request, "auth/register.html", {"form": form})
