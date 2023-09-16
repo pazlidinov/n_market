@@ -159,42 +159,12 @@
       <p>2023-2024 © CRM Powered by Texnopark</p>
     </div>
     <!-- Footer End -->
-    <!-- Chart Js -->
+   
 
     {% else %}
-
-    <div class="container-fluid px-5">
-      <div class="wrap">
-        <div class="auth-block">
-          <img src="" class="auth-block-logo" />
-          <h2 class="auth-block-h2">Kirish</h2>
-          <form method="POST" action="" class="auth-block-form">
-            {% csrf_token %}
-            <span class="auth-input">
-              <i class="fa-solid fa-user auth-icon"></i>
-              <input type="text" name="username" placeholder="Login" required
-            /></span>
-            <span class="auth-input">
-              <i class="fa-solid fa-lock auth-icon"></i>
-              <input
-                type="password"
-                name="password"
-                placeholder="Parol"
-                required
-              />
-              <span class="auth-password_shower">
-                <i class="fa-solid fa-eye"></i>
-              </span>
-            </span>
-            <button type="submit">Kirish</button>
-            <p class="auth-block-p">
-              Hisobingiz yo'qmi?
-              <a href="{% url 'accounts:register' %}"> Ro'yxatdan o'tish </a>
-            </p>
-          </form>
-        </div>
-      </div>
-    </div>
+    <meta http-equiv="refresh" content="0; url={% url 'accounts:login' %}">
+ 
+    
     {% endif %}
     <script src="{% static 'assets/chart/chart.js' %}"></script>
     <script src="{% static 'js/indicators-chart.js' %}"></script>
