@@ -29,10 +29,6 @@ class MeasureAdmin(admin.ModelAdmin):
     prepopulated_fields = {"slug": ("name",)}
 
 
-@admin.register(Producer)
-class ProducerAdmin(admin.ModelAdmin):
-    list_display = ["id", 'brand_name', 'inn']
-    prepopulated_fields = {"slug": ("brand_name",)}
 
 
 @admin.register(SaledProduct)

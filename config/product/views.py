@@ -18,5 +18,6 @@ class ProductsView(ListView):
 class SaledProduct(TemplateView):
     template_name = 'sales.html'
 
+class AddForm(TemplateView):
+    template_name = 'forms/forms.html'
 
-# class
