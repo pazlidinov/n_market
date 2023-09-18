@@ -32,7 +32,6 @@ class DeliveredItem(models.Model):
     extra_cost = models.IntegerField(default=0)
     delivered_date = models.DateTimeField(auto_now_add=True)
     region = models.CharField(max_length=150)
-    recipient = models.ForeignKey(User, on_delete=models.CASCADE, blank=True, null=True)
     recipient = models.ForeignKey(
         User, on_delete=models.CASCADE, blank=True, null=True)
 
