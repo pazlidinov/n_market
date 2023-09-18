@@ -23,9 +23,15 @@ urlpatterns = [
     path('accounts/', include('accounts.urls', namespace='accounts')),
     path('delivery/', include('delivery.urls', namespace='delivery')),
     path('', include('product.urls', namespace='product')),
+    
+    path("__debug__/", include("debug_toolbar.urls")),
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL,
                           document_root=settings.STATIC_ROOT)
     urlpatterns += static(settings.MEDIA_URL,
                           document_root=settings.MEDIA_ROOT)
+if settings.DEBUG:
+    import socket  # only if you haven't already imported this
+    hostname, _, ips = socket.gethostbyname_ex(socket.gethostname())
+    INTERNAL_IPS = [ip[: ip.rfind(".")] + ".1" for ip in ips] + ["127.0.0.1", "10.0.2.2"]

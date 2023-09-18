@@ -1,0 +1,120 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+<title>Yaratish</title>
+{% endblock title %}
+{% block content %}
+
+<link rel="stylesheet" href="{% static './css/forms.css' %}" />
+<!-- Forms Section -->
+<div class="section-wrapper">
+  <section class="forms" id="forms">
+    <div class="container-fluid px-2 px-md-5">
+      <div class="card">
+        <form action="" method="post">
+          {% csrf_token %}
+          {{form.title}}
+          <h1 class="text-center mb-3">Maxsulot yaratish</h1>
+          <div class="row">
+            <div class="col-12 col-md-6 col-lg-6">
+              <label for="period" class="form-label">Nomi*</label>
+              <div class="input-group">
+                {{form.title}}
+                <!-- <input type="text" id="title" aria-label="First name" placeholder="Tovar Nomi" class="form-control" /> -->
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-6">
+              <label for="period" class="form-label">Mahsulot turi*</label>
+              <select class="form-select" aria-label="Default select example">
+                {% for item in product.category.all %}
+                <option value="{{item.id}}">{{item.name}}</option>
+                {% endfor %}
+              </select>
+            </div>
+            <div class="col-12 col-md-6 col-lg-6">
+              <label for="period" class="form-label">Seria*</label>
+              <div class="input-group">
+                <input type="text" id="title" aria-label="First name" placeholder="Tovar Nomi" class="form-control" />
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-6">
+              <label for="period" class="form-label">Ikkilamchi turi*</label>
+              <select class="form-select" aria-label="Default select example">
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+            </div>
+            <div class="col-12 col-md-6 col-lg-6">
+              <label for="period" class="form-label">Shtrix kodi*</label>
+              <div class="input-group">
+                <input type="text" id="title" aria-label="First name" placeholder="Tovar Nomi" class="form-control" />
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-6">
+              <label for="period" class="form-label">Brand*</label>
+              <select class="form-select" aria-label="Default select example">
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+            </div>
+            <div class="col-12 col-md-6 col-lg-6">
+              <label for="period" class="form-label">O'lchov turi*</label>
+              <select class="form-select" aria-label="Default select example">
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+            </div>
+            <div class="col-12 col-md-6 col-lg-6">
+              <label for="period" class="form-label">Status*</label>
+              <select class="form-select" aria-label="Default select example">
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+            </div>
+
+            <hr />
+
+            <div class="col-12 col-md-6 col-lg-6">
+              <label for="period" class="form-label">Tannarx*</label>
+              <div class="input-group">
+                <input type="text" id="title" aria-label="First name" placeholder="Tovar Nomi" class="form-control" />
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-6">
+              <label for="period" class="form-label">Sotilish narx*</label>
+              <div class="input-group">
+                <input type="text" id="title" aria-label="First name" placeholder="Tovar Nomi" class="form-control" />
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-6">
+              <label for="period" class="form-label">Soni*</label>
+              <div class="input-group">
+                <input type="number" id="title" aria-label="First name" placeholder="Ombordan tovar"
+                  class="form-control" />
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-6">
+              <label for="period" class="form-label">Minimal soni*</label>
+              <div class="input-group">
+                <input type="number" id="title" aria-label="First name" placeholder="Ombordan tovar"
+                  class="form-control" />
+              </div>
+            </div>
+
+            <div class="col-12 col-md-12 col-lg-12">
+              <label for="exampleFormControlTextarea1" class="form-label">Komentariya*</label>
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"
+                placeholder="Tovar komentariyasi"></textarea>
+            </div>
+          </div>
+          <button type="submit">Maxsulot yaratish</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</div>
+{% endblock content %}
