@@ -1,7 +1,7 @@
 from django.db import models
 
 from product.models import Product
-# from accounts.models import User
+from accounts.models import User
 # Create your models here.
 
 
@@ -32,12 +32,9 @@ class DeliveredItem(models.Model):
     extra_cost = models.IntegerField(default=0)
     delivered_date = models.DateTimeField(auto_now_add=True)
     region = models.CharField(max_length=150)
-<<<<<<< HEAD
-    # recipient = models.ForeignKey(User, on_delete=models.CASCADE, blank=True, null=True)
-=======
+    recipient = models.ForeignKey(User, on_delete=models.CASCADE, blank=True, null=True)
     recipient = models.ForeignKey(
         User, on_delete=models.CASCADE, blank=True, null=True)
->>>>>>> 7ff981c9de431fb47cca555b16e35d91ae23edaf
 
     def __str__(self):
         return self.company_name
