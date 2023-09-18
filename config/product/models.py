@@ -78,6 +78,7 @@ class Product(models.Model):
         Measure, on_delete=models.PROTECT, related_name='pr_measure')
     produser = models.ForeignKey(
         Producer, on_delete=models.PROTECT, related_name='pr_producer')
+  
 
     def __str__(self):
         return str(self.title)
