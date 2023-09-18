@@ -11,4 +11,7 @@ urlpatterns = [
 
     path('register/', views.register, name='register'),
     
+    
+    path('employee/', views.Employee.as_view(), name='employee'),
+    
 ]

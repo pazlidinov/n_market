@@ -3,7 +3,7 @@ from django.contrib.auth import login, authenticate
 from django.contrib.auth.models import Group
 
 from django.contrib.auth.forms import UserCreationForm
-
+from django.views.generic.base import TemplateView
 
 def register(request):
     form = UserCreationForm()
@@ -24,3 +24,5 @@ def register(request):
     return render(request, "auth/register.html", {"form": form})
 
 
+class Employee(TemplateView):
+    template_name ='contragents.html'
