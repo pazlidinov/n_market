@@ -1,28 +1,26 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import login, authenticate
 from django.contrib.auth.models import Group
-from django.contrib import messages
+
 from django.contrib.auth.forms import UserCreationForm
 from django.views.generic.base import TemplateView
-from .forms import UserRegisterForm
-
-
-
 
 def register(request):
-    form = UserRegisterForm()
+    form = UserCreationForm()
     if request.method == "POST":
-        form = UserRegisterForm(request.POST)
+        form = UserCreationForm(request.POST)
         if form.is_valid():
             user = form.save()
-            try:
-                group = Group.objects.get(name="Default User")
-                group.user_set.add(user)
-            except Exception as er:
-                print(er)
+            # try:
+            #     group = Group.objects.get(name="user")
+            #     group.user_set.add(u)
+            # except Exception as er:
+            #     authenticate(u)
             authenticate(user)
-            login(request, user)
-        return redirect('/accounts/login')
+            return redirect("/accounts/login/")
+        else:
+            return render(request, "auth/register.html", {"form": form})
+
     return render(request, "auth/register.html", {"form": form})
 
 
