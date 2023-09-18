@@ -118,12 +118,12 @@ USE_TZ = True
 
 
 
-LOGIN_URL = 'accounts/login'
-# chiqish uchun url
-LOGOUT_URL = 'accounts/logout'
-# kirganidan song ochilishi kerak bolgan url
-LOGIN_REDIRECT_URL = '/'
 
+AUTH_USER_MODEL = "accounts.User"
+
+LOGIN_URL = "/accounts/login/"
+LOGOUT_URL = "/accounts/logout/"
+LOGIN_REDIRECT_URL = "/"
 # AUTH_USER_MODEL = "accounts.User"
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
@@ -141,4 +141,4 @@ STATICFILES_DIRS = (
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-AUTH_USER_MODEL = "accounts.User"   
+# AUTH_USER_MODEL = "accounts.User"   
