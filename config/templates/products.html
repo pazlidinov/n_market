@@ -323,14 +323,60 @@
           <!-- *** -->
           <section class="second-order mt-5">
             <p class="h2 fw-bold">
-              Buyeda sizning barcha tovar va xizmatlaringiz bo'ladi
-            </p>
-            <a class="btn btn-primary p-3 mt-4" href="../forms/forms.html"
-              >Tovar qo'shish <i class="fa-solid fa-plus"></i
-            ></a>
-            <a class="btn btn-primary p-3 mt-4" href="../forms/forms.html"
-              >Xizmat qo'shish <i class="fa-solid fa-plus"></i
-            ></a>
+              <!-- Table -->
+          <div class="table mt-4 products_table">
+            <div class="table-responsive pt-3">
+              <table class="table table-bordered overflow-scroll">
+                <thead>
+                  <tr>
+                    <th scope="col">№</th>
+                    <th scope="col">Nomi</th>
+                    <th scope="col">Series</th>
+                    <th scope="col">Soni</th>
+                    <th scope="col">Minimal soni</th>
+                    <th scope="col">Tan narx</th>
+                    <th scope="col">Sotish narx</th>
+                    <th scope="col">Shtrix kod</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Izoh</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {% for item in object_list %}
+                  <tr>
+                    <th scope="row">{{item.id}}</th>
+                    <td>{{item.title}}</td>
+                    <td>{{item.series}}</td>
+                    <td>{{item.count}}</td>
+                    <td>{{item.min_count}}</td>
+                    <td>{{item.entry_price}}</td>
+                    <td>{{item.sale_price}}</td>
+                    <td>{{item.bar_code}}</td>
+                    <td>{{item.status}}</td>
+                    <td>{{item.commentary}}</td>
+                  </tr>
+                  {% empty %}
+                  <tr>No product</tr>
+                  {% endfor %}
+
+                </tbody>
+              </table>
+            </div>
+            <ul class="pagination justify-content-end">
+              <li class="page-item">
+                <a class="page-link" href="#" tabindex="-1">Previous</a>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">1</a></li>
+              <li class="page-item active disabled">
+                <a class="page-link" href="#">2</a>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item">
+                <a class="page-link" href="#">Next</a>
+              </li>
+            </ul>
+          </div>
+            </p>           
             <p class="mt-4">
               Agar sizda allaqachon mahsulot katalogi bo'lsa, uni
               <a href="#" class="text-decoration-none">Excel hujjati</a>dan yoki
