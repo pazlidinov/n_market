@@ -10,7 +10,13 @@ class User(AbstractUser):
     )
     image = models.ImageField(upload_to='user-images/')
     email = models.EmailField(max_length=200)
+    birthday = models.DateField(null=True, verbose_name="Tug'ilgan sana")
+    age = models.CharField(max_length=100)
     status = models.CharField(max_length=255, choices=STATUS, default='Foydalanuvchi')
+    phone = models.CharField(max_length=100, blank=True) 
+    address = models.CharField(_(max_length=200)    
+    acceptance_date = models.DateField(auto_now_add=True)
+    
 
     def get_full_name(self):
         if self.first_name and self.last_name:
@@ -20,4 +26,4 @@ class User(AbstractUser):
     
     def __str__(self):
         return str(self.username)
-    
+
