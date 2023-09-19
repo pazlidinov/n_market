@@ -13,16 +13,28 @@ from .forms import UserRegisterForm
 
 
 def register(request):
+    form = UserRegisterForm()
     if request.method == "POST":
         form = UserRegisterForm(request.POST)
         if form.is_valid():
-            form.save()
-            username = form.cleaned_data.get('username')
-            messages.success(request, f' Successfully Created for {username} Login In Now!!!')
-            return redirect('accounts/login/')
-    else:
-        form = UserRegisterForm()
-    return render(request, 'auth/register.html', {'form': form})
+            u = form.save()
+            try:
+                group = Group.objects.get(name="default_user")
+                group.user_set.add(u)
+            except Exception as er:
+                # raise
+                print(er)
+            print("OK")
+            authenticate(u)
+            message = "Successfully !"
+            messages.add_message(request, messages.SUCCESS, message)
+            return redirect("/accounts/login")
+        else:
+            message = "Error !"
+            messages.add_message(request, messages.ERROR, message)
+            return render(request, "auth/register.html", {"form": form})
+
+    return render(request, "auth/register.html", {"form": form})
 
 
 
