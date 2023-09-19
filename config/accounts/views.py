@@ -28,13 +28,14 @@ def register(request):
             authenticate(u)
             message = "Successfully !"
             messages.add_message(request, messages.SUCCESS, message)
-            return redirect("/accounts/login")
+            return redirect("/")
         else:
             message = "Error !"
             messages.add_message(request, messages.ERROR, message)
             return render(request, "auth/register.html", {"form": form})
 
     return render(request, "auth/register.html", {"form": form})
+
 
 
 
