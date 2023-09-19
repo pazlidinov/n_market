@@ -33,8 +33,7 @@ class DeliveredItem(models.Model):
     delivered_date = models.DateTimeField(auto_now_add=True)
     region = models.CharField(max_length=150)
     recipient = models.ForeignKey(User, on_delete=models.CASCADE, blank=True, null=True)
-    recipient = models.ForeignKey(
-        User, on_delete=models.CASCADE, blank=True, null=True)
+ 
 
     def __str__(self):
         return self.company_name
