@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="{% static 'assets/main-css/root.css' %}" />
     <link rel="stylesheet" href="{% static 'assets/main-css/main.css' %}" />
     <link rel="stylesheet" href="{% static './css/auth.css' %}" />
+    
     <link
       rel="stylesheet"
       href="{% static './css/orders_and_services.css' %}"
@@ -50,7 +51,7 @@
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
               <li class="dropdown-header">
-                <h6>{{request.user.username}}</h6>
+                <h6>{{user.get_full_name}}</h6>
                 <p>{{request.user.email}}</p>
               </li>
               <li>
@@ -104,13 +105,13 @@
             </li>
             <li class="nav-item my-1 my-lg-0">
               <a
-                href="{% url 'product:purchases' %}"
+                href="{% url 'delivery:purchases' %}"
                 class="nav-link p-2 text-white"
                 ><i class="fa-solid fa-cart-shopping"></i> Xaridlar</a
               >
             </li>
             <li class="nav-item my-1 my-lg-0">
-              <a href="../sales/sales.html" class="nav-link p-2 text-white"
+              <a href="{% url 'product:sales' %}" class="nav-link p-2 text-white"
                 ><i class="fa-solid fa-bag-shopping"></i> Sotilganlar</a
               >
             </li>
@@ -123,7 +124,7 @@
             </li>
             <li class="nav-item my-1 my-lg-0">
               <a
-                href="../contragents/contagents.html"
+                href="{% url 'accounts:employee' %}"
                 class="nav-link p-2 text-white"
                 ><i class="fa-solid fa-user-group"></i> Kontragentlar</a
               >
@@ -142,13 +143,7 @@
                 ><i class="fa-solid fa-shop"></i> Chakana savdo</a
               >
             </li>
-            <li class="nav-item my-1 my-lg-0">
-              <a
-                href="../production/production.html"
-                class="nav-link p-2 text-white"
-                ><i class="fa-solid fa-industry"></i> Ishlab chiqarish</a
-              >
-            </li>
+            
           </ul>
         </div>
       </div>

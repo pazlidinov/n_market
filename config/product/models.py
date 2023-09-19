@@ -1,5 +1,5 @@
 from django.db import models
-from django.contrib.auth.models import User
+from accounts.models import User
 # Create your models here.
 
 
@@ -42,13 +42,6 @@ class Measure(models.Model):
 
 
 
-class Producer(models.Model):
-    brand_name = models.CharField(max_length=150)
-    slug = models.SlugField(max_length=150)
-    inn = models.CharField(max_length=15)
-
-    def __str__(self):
-        return str(self.brand_name)
 
 STATUS = (
         ('ready', 'Tayyor'),
@@ -76,8 +69,8 @@ class Product(models.Model):
         Brand, on_delete=models.PROTECT, related_name='pr_branch')
     measure = models.ForeignKey(
         Measure, on_delete=models.PROTECT, related_name='pr_measure')
-    produser = models.ForeignKey(
-        Producer, on_delete=models.PROTECT, related_name='pr_producer')
+   
+  
 
     def __str__(self):
         return str(self.title)

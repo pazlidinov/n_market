@@ -38,12 +38,18 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'debug_toolbar',
     'product',
     'accounts',
     'delivery'
 ]
-
-MIDDLEWARE = [
+INTERNAL_IPS = [
+    # ...
+    "127.0.0.1",
+    # ...
+]
+MIDDLEWARE = [    
+     'debug_toolbar.middleware.DebugToolbarMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -51,6 +57,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
+    
 ]
 
 ROOT_URLCONF = 'config.urls'
@@ -116,15 +124,14 @@ USE_I18N = True
 
 USE_TZ = True
 
-# AUTH_USER_MODEL = "accounts.User"
 
 
-LOGIN_URL = 'accounts/login'
-# chiqish uchun url
-LOGOUT_URL = 'accounts/logout'
-# kirganidan song ochilishi kerak bolgan url
-LOGIN_REDIRECT_URL = '/'
 
+AUTH_USER_MODEL = "accounts.User"
+
+LOGIN_URL = "/accounts/login/"
+LOGOUT_URL = "/accounts/logout/"
+LOGIN_REDIRECT_URL = "/"
 # AUTH_USER_MODEL = "accounts.User"
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
@@ -141,3 +148,5 @@ STATICFILES_DIRS = (
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# AUTH_USER_MODEL = "accounts.User"   
