@@ -9,21 +9,21 @@ from .forms import UserRegisterForm
 
 
 
+
+
+
 def register(request):
-    form = UserRegisterForm()
     if request.method == "POST":
         form = UserRegisterForm(request.POST)
         if form.is_valid():
-            user = form.save()
-            try:
-                group = Group.objects.get(name="Default User")
-                group.user_set.add(user)
-            except Exception as er:
-                print(er)
-            authenticate(user)
-            login(request, user)
-        return redirect('/accounts/login')
-    return render(request, "auth/register.html", {"form": form})
+            form.save()
+            username = form.cleaned_data.get('username')
+            messages.success(request, f' Successfully Created for {username} Login In Now!!!')
+            return redirect('accounts/login/')
+    else:
+        form = UserRegisterForm()
+    return render(request, 'auth/register.html', {'form': form})
+
 
 
 class Employee(TemplateView):
