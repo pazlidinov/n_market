@@ -13,5 +13,6 @@ urlpatterns = [
     
     
     path('employee/', views.Employee.as_view(), name='employee'),
+    path('kontragent_form/', views.Kontragents.as_view(), name='kontragents'),
     
 ]

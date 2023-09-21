@@ -41,3 +41,8 @@ def register(request):
 
 class Employee(TemplateView):
     template_name ='contragents.html'
+
+
+
+class Kontragents(TemplateView):
+    template_name ='forms/contragent_form.html'
