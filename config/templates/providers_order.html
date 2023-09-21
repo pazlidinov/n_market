@@ -285,29 +285,30 @@
               <thead>
                 <tr>
                   <th scope="col">№</th>
-                  <th scope="col">Vaqt</th>
-                  <th scope="col">Zaxiradan</th>
-                  <th scope="col">Tashkilot</th>
-                  <th scope="col">Kontragent</th>
-                  <th scope="col">Yuborilgan summa</th>
-                  <th scope="col">Napechatno</th>
-                  <th scope="col">Komentariya</th>
+                  <th scope="col">Kompaniya nomi</th>
+                  <th scope="col">INN</th>
+                  <th scope="col">Bank</th>
+                  <th scope="col">Code</th>
+                  <th scope="col">MFO</th>
+                  <th scope="col">Xisob raqam</th>
                 </tr>
               </thead>
               <tbody>
+                {% for object in object_list  %}
                 <tr>
-                  <th scope="row">1</th>
-                  <td></td>
-                  <td>0 dan 1-1</td>
-                  <td></td>
-                  <td></td>
-                  <td>0.0</td>
-                  <td></td>
-                  <td></td>
+                  <th scope="row">{{ object.id }}</th>
+                  <td>{{ object.company_name }}</td>
+                  <td>{{ object.inn }}</td>
+                  <td>{{ object.bank }}</td>
+                  <td>{{ object.code }}</td>
+                  <td>{{ object.mfo }}</td>
+                  <td>{{ object.xisob_raqam }}</td>
                 </tr>
+              {% endfor %}
               </tbody>
             </table>
           </div>
+
           <ul class="pagination justify-content-end">
             <li class="page-item">
               <a class="page-link" href="#" tabindex="-1">Previous</a>
