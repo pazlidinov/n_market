@@ -4,8 +4,9 @@ from django.contrib.auth.models import Group
 from django.contrib import messages
 from django.contrib.auth.forms import UserCreationForm
 from django.views.generic.base import TemplateView
+from django.views.generic import ListView, CreateView
 from .forms import UserRegisterForm
-
+from .models import User
 
 
 
@@ -39,10 +40,17 @@ def register(request):
 
 
 
-class Employee(TemplateView):
-    template_name ='contragents.html'
+def employee(request):
+    object_list = User.objects.filter(is_staff=True)
+    context = {
+        'object_list':object_list
+    }
+    return render(request, 'contragents.html', context)
 
 
 
-class Kontragents(TemplateView):
-    template_name ='forms/contragent_form.html'
+class KontragentFormView(CreateView):
+    model = User
+    template_name = 'forms/contragent_form.html'
+    fields = ['password', 'is_superuser', 'username', 'first_name', 'last_name', 'is_staff', 'is_active', 'email', 'status', 'birthday', 'age', 'phone', 'address']
+    success_url = '/'

@@ -285,24 +285,28 @@
               <thead>
                 <tr>
                   <th scope="col">№</th>
-                  <th scope="col">Kompaniya nomi</th>
-                  <th scope="col">INN</th>
-                  <th scope="col">Bank</th>
-                  <th scope="col">Code</th>
-                  <th scope="col">MFO</th>
-                  <th scope="col">Xisob raqam</th>
+                  <th scope="col">Mahsulot nomi</th>
+                  <th scope="col">Kompaniya</th>
+                  <th scope="col">Soni</th>
+                  <th scope="col">Narxi</th>
+                  <th scope="col">Qo'shimcha soliq</th>
+                  <th scope="col">Yetkazish vaqti</th>
+                  <th scope="col">Hudud</th>
+                  <th scope="col">Qabul qiluvchi</th>
                 </tr>
               </thead>
               <tbody>
                 {% for object in object_list  %}
                 <tr>
                   <th scope="row">{{ object.id }}</th>
+                  <td>{{ object.product.title }}</td>
                   <td>{{ object.company_name }}</td>
-                  <td>{{ object.inn }}</td>
-                  <td>{{ object.bank }}</td>
-                  <td>{{ object.code }}</td>
-                  <td>{{ object.mfo }}</td>
-                  <td>{{ object.xisob_raqam }}</td>
+                  <td>{{ object.count }}</td>
+                  <td>{{ object.price }}</td>
+                  <td>{{ object.extra_cost }}</td>
+                  <td>{{ object.delivered_date }}</td>
+                  <td>{{ object.region }}</td>
+                  <td>{{ object.recipient }}</td>
                 </tr>
               {% endfor %}
               </tbody>

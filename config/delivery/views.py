@@ -6,7 +6,7 @@ from .models import DeliveredItem, DeliveringCompany
 
 
 class PurchaseView(ListView):
-    model = DeliveringCompany
+    model = DeliveredItem
     template_name = 'providers_order.html'
 
 

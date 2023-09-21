@@ -166,38 +166,37 @@
                   <thead>
                     <tr>
                       <th scope="col">Ism</th>
-                      <th scope="col">Kod</th>
-                      <th scope="col">Yaratilgan</th>
+                      <th scope="col">Email</th>
+                      <th scope="col">Tug'ilgan sana</th>
+                      <th scope="col">Yosh</th>
+                      <th scope="col">Status</th>
                       <th scope="col">Telefon</th>
-                      <th scope="col">Faks</th>
-                      <th scope="col">E-mail</th>
-                      <th scope="col">Holat</th>
-                      <th scope="col">Haqiqiy manzili</th>
-                      <th scope="col">Narxlar</th>
-
-                      <th scope="col">Izoh</th>
-                      <th scope="col">Guruhlar</th>
-                      <th scope="col">Pechatlangan</th>
-                      <th scope="col">Komentariya</th>
+                      <th scope="col">Manzil</th>
+                      <th scope="col">Ish vaqti</th>
                       <th scope="col">
                         <i class="fa-solid fa-gear"></i>
                       </th>
                     </tr>
                   </thead>
                   <tbody>
+                    {% for object in object_list %}
                     <tr>
-                      <th scope="row">john</th>
-                      <td></td>
-                      <td>0 dan 1-1</td>
-                      <td></td>
-                      <td></td>
-                      <td>0.0</td>
-                      <td>0.0</td>
-                      <td>0.0</td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
+                      <th scope="row">
+                        {% if object.first_name %}
+                        {{ object.get_full_name }}
+                        {% else %}
+                        {{ object.username }}
+                        {% endif %}
+                      </th>
+                      <td>{{ object.email }}</td>
+                      <td>{{ object.birthday }}</td>
+                      <td>{{ object.age }}</td>
+                      <td>{{ object.status }}</td>
+                      <td>{{ object.phone }}</td>
+                      <td>{{ object.address }}</td>
+                      <td>{{ object.acceptance_date }}</td>
                     </tr>
+                    {% endfor %}
                   </tbody>
                 </table>
               </div>
