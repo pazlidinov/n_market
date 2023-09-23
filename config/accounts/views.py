@@ -6,6 +6,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.views.generic.base import TemplateView
 from django.views.generic import ListView, CreateView
 from .forms import UserRegisterForm
+from django.core.paginator import Paginator
 from .models import User
 
 
@@ -54,3 +55,4 @@ class KontragentFormView(CreateView):
     template_name = 'forms/contragent_form.html'
     fields = ['password', 'is_superuser', 'username', 'first_name', 'last_name', 'is_staff', 'is_active', 'email', 'status', 'birthday', 'age', 'phone', 'address']
     success_url = '/'
+   
