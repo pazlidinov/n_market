@@ -42,10 +42,18 @@ def register(request):
 
 
 def employee(request):
-    object_list = User.objects.filter(is_staff=True)
+    user_list = User.objects.all()
+    paginator = Paginator(user_list, 2)  # Show 25 contacts per page.
+    page_number = request.GET.get("page")
+    object_list = User.objects.filter(is_staff=True).page_obj = paginator.get_page(page_number)
+
+    
     context = {
-        'object_list':object_list
+        'object_list':object_list,
+        
     }
+    
+   
     return render(request, 'contragents.html', context)
 
 
